@@ -1,0 +1,14 @@
+# conveniences
+github "PureLayout/PureLayout" ~> 3.0
+github "radex/SwiftyUserDefaults" "master"
+
+# the stuff we actually care about
+github "ReSwift/ReSwift" ~> 4.0
+github "ReSwift/ReactiveReSwift" ~> 4.0
+github "ReactiveCocoa/ReactiveSwift" ~> 3.1
+github "ReactiveCocoa/ReactiveCocoa" ~> 7.1
+github "antitypical/Result" ~> 3.2
+
+# for testing purposes
+github "Quick/Quick" ~> 7.0
+github "Quick/Nimble" ~> 1.2
