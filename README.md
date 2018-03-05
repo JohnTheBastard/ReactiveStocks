@@ -13,7 +13,7 @@ https://www.alphavantage.co/support/#api-key
 2. ~~To search for new stock symbols, you will need to generate a key for USFundamentals.com, which you can do here:~~
 ~~https://account.usfundamentals.com~~
 
-###Step 2:
+### Step 2:
 Once you have your keys, add a new file called `Secrets.swift`  to the Xcode project file under the group `ReactiveStocks > Source > Networking`.
 
 Cut and paste the following code into `Secrets.swift`.
@@ -35,5 +35,5 @@ struct Secrets {
 ```
 Then cut and paste you the key you generated in Step 1 into the string literal for `.alphaVantage` where specified. (Ignore `.usFundamentals` for now.)
 
-###Step 3
+### Step 3
 Build the app.
