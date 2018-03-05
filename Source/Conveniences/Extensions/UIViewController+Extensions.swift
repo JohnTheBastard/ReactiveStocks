@@ -19,8 +19,8 @@ extension UIViewController {
     }
 
     func setNavigationBackground() {
-        let blueImage = UIImage.imageFromColor(Colors.blue.uiColor)
-        self.navigationController?.navigationBar.setBackgroundImage(blueImage, for: .default)
+        let blackImage = UIImage.imageFromColor(Colors.black.uiColor)
+        self.navigationController?.navigationBar.setBackgroundImage(blackImage, for: .default)
         self.navigationController?.navigationBar.tintColor = Colors.white.uiColor
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
@@ -39,7 +39,7 @@ extension UIViewController {
         button.isUserInteractionEnabled = false
         button.frame = theFrame
         button.setImage(UIImage.getScaledImage(imageResourceName: "logo",
-                                               size: theFrame.size ),
+                                               size: theFrame.size),
                         for: .normal)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
         return button

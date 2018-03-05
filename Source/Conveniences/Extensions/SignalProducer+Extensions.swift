@@ -1,10 +1,35 @@
 //  Created by John Hearn on 2/2/18.
 //  Copyright © 2018 Bastardized Productions. All rights reserved.
 
-import Foundation
+import UIKit
 import ReactiveSwift
+import Result
 
 extension SignalProducer {
+    func ignoreErrors(replacementValue: Value? = nil, andDo block: ((Error) -> ())? = nil) -> SignalProducer<Value, NoError> {
+        return flatMapError { error in
+            print("Ignoring error: \(error)")
+
+            block?(error)
+            return replacementValue.map(SignalProducer<Value, NoError>.init) ??
+                SignalProducer<Value, NoError>.empty
+        }
+    }
+
+    func withActivityIndicator() -> SignalProducer {
+        return on(started: {
+                    DispatchQueue.main.async {
+                        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+                    }
+               })
+               .on(terminated: {
+                    DispatchQueue.main.async {
+                        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    }
+               })
+    }
+
+
     func delay(_ interval: TimeInterval) -> SignalProducer<Value, Error> {
         return delay(interval, on: QueueScheduler.main)
     }

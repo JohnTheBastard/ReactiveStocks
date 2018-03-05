@@ -4,6 +4,7 @@
 import UIKit
 
 enum Colors: EnumCollection {
+    case black
     case blue
     case red
     case yellow
@@ -14,6 +15,8 @@ enum Colors: EnumCollection {
 
     var uiColor: UIColor {
         switch self {
+        case .black:
+            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         case .blue:
             return #colorLiteral(red: 0, green: 0.5, blue: 0.75, alpha: 1)
         case .red:

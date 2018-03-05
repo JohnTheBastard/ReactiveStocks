@@ -28,5 +28,7 @@ extension MutableProperty: Then {}
 extension UIEdgeInsets: Then {}
 extension UIOffset: Then {}
 extension UIRectEdge: Then {}
+extension URL: Then {}
+extension URLComponents: Then {}
 
 

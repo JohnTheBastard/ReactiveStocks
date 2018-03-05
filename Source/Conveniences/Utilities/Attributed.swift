@@ -6,7 +6,7 @@ import UIKit
 enum Attributed {
     case title(String)
     case subtitle(String)
-    case value(String)
+    case huge(String)
 
     var string: NSMutableAttributedString {
         switch self {
@@ -14,7 +14,7 @@ enum Attributed {
             return addAttributes(for: text)
         case .subtitle(let text):
             return addAttributes(for: text)
-        case .value(let text):
+        case .huge(let text):
             return addAttributes(for: text)
         }
     }
@@ -28,7 +28,7 @@ enum Attributed {
             return [ NSAttributedStringKey.font: UIFont.init(name: "Helvetica", size: 12)!,
                      NSAttributedStringKey.foregroundColor: Colors.white.uiColor,
                      NSAttributedStringKey.kern: CGFloat(2) ]
-        case .value:
+        case .huge:
             return [ NSAttributedStringKey.font: UIFont.init(name: "Helvetica", size: 48)!,
                      NSAttributedStringKey.foregroundColor: Colors.white.uiColor ]
         }

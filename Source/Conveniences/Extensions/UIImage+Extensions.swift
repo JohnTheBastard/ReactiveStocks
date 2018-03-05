@@ -12,7 +12,7 @@ extension UIImage {
     var breadthSize: CGSize { return CGSize(width: breadth, height: breadth) }
     var breadthRect: CGRect { return CGRect(origin: .zero, size: breadthSize) }
 
-    static func getScaledImage( imageResourceName: String, size: CGSize ) -> UIImage {
+    static func getScaledImage(imageResourceName: String, size: CGSize ) -> UIImage {
         return UIImage().scale(image: #imageLiteral(resourceName:  imageResourceName ), size: size)
     }
 
