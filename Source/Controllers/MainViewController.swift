@@ -41,7 +41,7 @@ class MainViewController: BaseViewController {
             $0.autoPinEdge(toSuperviewEdge: .left)
         }
 
-        self.provider.queryService.producer.on { value in
+        self.provider.queryService.scheduledStockQuotes.on { value in
             self.provider.stateService.dispatch(.update(value))
             self.tableView.reloadData()
         }.start()

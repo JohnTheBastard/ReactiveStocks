@@ -7,23 +7,23 @@ import Quick
 import ReactiveSwift
 @testable import ReactiveStocks
 
-class StockQuoteServiceSpec: QuickSpec {
-    var quoteServiceUnderTest: StockQuoteService!
+class StockDataServiceSpec: QuickSpec {
+    var stockDataServiceUnderTest: StockDataService_Testable!
     var stocks: [Stock]!
 
     override func spec() {
         afterSuite {
-            self.quoteServiceUnderTest = nil
+            self.stockDataServiceUnderTest = nil
             self.stocks = nil
         }
 
-        describe("StockQuoteService") {
+        describe("StockDataService") {
             context("Retrieve Stocks") {
-                self.quoteServiceUnderTest = StockQuoteService()
+                self.stockDataServiceUnderTest = StockDataService_Testable()
                 self.stocks = []
 
                 it("should have a quote service") {
-                    expect(self.quoteServiceUnderTest).toNot(beNil())
+                    expect(self.stockDataServiceUnderTest).toNot(beNil())
                 }
 
                 it("should start with no stocks") {
@@ -32,7 +32,7 @@ class StockQuoteServiceSpec: QuickSpec {
 
                 let promise = expectation(description: "Status code: 200")
 
-                self.quoteServiceUnderTest.producer.on { result in
+                self.stockDataServiceUnderTest.scheduledStockQuotes.on { result in
                     self.stocks = result
                     promise.fulfill()
                 }.start()

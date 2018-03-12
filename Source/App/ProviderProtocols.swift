@@ -6,7 +6,7 @@ import UIKit
 /* Protocols describing dependencies for injection */
 
 protocol QueryServiceProvider {
-    var queryService: StockQuoteService { get }
+    var queryService: StockDataService { get }
 }
 protocol AppStateProvider {
     var stateService: ReactiveStore { get }

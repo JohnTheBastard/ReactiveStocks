@@ -8,6 +8,7 @@ struct Stock {
     var price: Float?
     var volume: String?
     var date: Date?
+    var timeSeries: [DailySummary] = []
 
     var displayName: String {
         return Example(rawValue: self.symbol)?.displayName ?? self.symbol
@@ -38,19 +39,26 @@ extension Stock: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Stock.CodingKeys.self)
         let symbol = try container.decode(String.self, forKey: .symbol)
-        self.symbol = symbol
-        let price = try container.decode(String.self, forKey: .price)
-        self.price = Float(price)
+        let priceString = try container.decode(String.self, forKey: .price)
         let volume = try container.decode(String.self, forKey: .volume)
-        self.volume = volume
         let dateString = try container.decode(String.self, forKey: .timestamp)
-        let date = Stock.dateFormatter.date(from: dateString)
-        self.date = date
+
+        self.symbol = symbol
+        self.volume = volume
+
+        if let price = Float(priceString),
+           let date = Stock.dateFormatter.date(from: dateString) {
+
+            self.price = price
+            self.date = date
+        } else {
+            throw ParsingError.failedCast("Unable to cast String values to Stock property types.")
+        }
     }
 }
 
 struct Quote: Decodable {
-    let metaData: [String: String]
+    private let metaData: [String: String]
     let stocks: [Stock]
 
     private enum CodingKeys: String, CodingKey {
@@ -64,6 +72,13 @@ struct Quote: Decodable {
         self.metaData = metaData
         let stocks = try container.decode([Stock].self, forKey: .stocks)
         self.stocks = stocks
+    }
+}
+
+extension Quote: Consumable {
+    typealias Item = Stock
+    var consumables: [Item] {
+        return self.stocks
     }
 }
 

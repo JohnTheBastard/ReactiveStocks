@@ -4,14 +4,14 @@
 import UIKit
 
 class ServiceProvider: QueryServiceProvider, AppStateProvider, DataSourceProvider {
-    private(set) var queryService: StockQuoteService
+    private(set) var queryService: StockDataService
     private(set) var stateService: ReactiveStore
     private(set) var dataSource: StocksDataSource
 
     static let shared = ServiceProvider()
 
     private init() {
-        self.queryService = stockQuoteService
+        self.queryService = stockDataService
         self.stateService = reactiveStore
         self.dataSource   = StocksDataSource.shared
     }

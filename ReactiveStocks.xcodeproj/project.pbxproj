@@ -39,7 +39,7 @@
 		F2360B2E20410D5D0035F7C7 /* UIView+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360B2920410D5D0035F7C7 /* UIView+Closures.swift */; };
 		F2360B2F20410D5D0035F7C7 /* UIControl+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360B2A20410D5D0035F7C7 /* UIControl+Closures.swift */; };
 		F2360B3020410D5D0035F7C7 /* UIBarButtonItem+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360B2B20410D5D0035F7C7 /* UIBarButtonItem+Closures.swift */; };
-		F2360B3220410D850035F7C7 /* StockQuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360B3120410D850035F7C7 /* StockQuoteService.swift */; };
+		F2360B3220410D850035F7C7 /* StockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360B3120410D850035F7C7 /* StockDataService.swift */; };
 		F2360B3D204110F20035F7C7 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2360B35204110F10035F7C7 /* ReSwift.framework */; };
 		F2360B3E204110F20035F7C7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2360B36204110F20035F7C7 /* Result.framework */; };
 		F2360B3F204110F20035F7C7 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2360B37204110F20035F7C7 /* ReactiveCocoa.framework */; };
@@ -56,7 +56,11 @@
 		F2586A0D204B65B10093FD55 /* ProviderProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2586A0C204B65B10093FD55 /* ProviderProtocols.swift */; };
 		F2586A0F204B67E20093FD55 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2586A0E204B67E20093FD55 /* ServiceProvider.swift */; };
 		F2586A11204B6A2D0093FD55 /* Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2586A10204B6A2D0093FD55 /* Stocks.swift */; };
-		F295F611204B1B720021CE53 /* ReactiveStocksError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295F610204B1B720021CE53 /* ReactiveStocksError.swift */; };
+		F26641562054F56100E56EF4 /* DailyTimeSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26641552054F56100E56EF4 /* DailyTimeSeries.swift */; };
+		F26641592054FF2600E56EF4 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26641582054FF2600E56EF4 /* NetworkingError.swift */; };
+		F266415B205517AB00E56EF4 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266415A205517AB00E56EF4 /* ApiError.swift */; };
+		F280AC58205612F700A472A2 /* Consumable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280AC57205612F700A472A2 /* Consumable.swift */; };
+		F295F611204B1B720021CE53 /* ParsingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295F610204B1B720021CE53 /* ParsingError.swift */; };
 		F2C91591204D53F700637486 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C9158F204D53F700637486 /* Nimble.framework */; };
 		F2C91592204D53F700637486 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C91590204D53F700637486 /* Quick.framework */; };
 		F2C91593204D53FF00637486 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F2C9158F204D53F700637486 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -132,7 +136,7 @@
 		F2360B2920410D5D0035F7C7 /* UIView+Closures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Closures.swift"; sourceTree = "<group>"; };
 		F2360B2A20410D5D0035F7C7 /* UIControl+Closures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Closures.swift"; sourceTree = "<group>"; };
 		F2360B2B20410D5D0035F7C7 /* UIBarButtonItem+Closures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Closures.swift"; sourceTree = "<group>"; };
-		F2360B3120410D850035F7C7 /* StockQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuoteService.swift; sourceTree = "<group>"; };
+		F2360B3120410D850035F7C7 /* StockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDataService.swift; sourceTree = "<group>"; };
 		F2360B35204110F10035F7C7 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		F2360B36204110F20035F7C7 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		F2360B37204110F20035F7C7 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
@@ -149,7 +153,11 @@
 		F2586A0C204B65B10093FD55 /* ProviderProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderProtocols.swift; sourceTree = "<group>"; };
 		F2586A0E204B67E20093FD55 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		F2586A10204B6A2D0093FD55 /* Stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks.swift; sourceTree = "<group>"; };
-		F295F610204B1B720021CE53 /* ReactiveStocksError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveStocksError.swift; sourceTree = "<group>"; };
+		F26641552054F56100E56EF4 /* DailyTimeSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTimeSeries.swift; sourceTree = "<group>"; };
+		F26641582054FF2600E56EF4 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		F266415A205517AB00E56EF4 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		F280AC57205612F700A472A2 /* Consumable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumable.swift; sourceTree = "<group>"; };
+		F295F610204B1B720021CE53 /* ParsingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingError.swift; sourceTree = "<group>"; };
 		F2C9158F204D53F700637486 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F2C91590204D53F700637486 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		F2C9159B204D553500637486 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -239,7 +247,6 @@
 			children = (
 				F2360AB1204107160035F7C7 /* AppDelegate.swift */,
 				F2586A0C204B65B10093FD55 /* ProviderProtocols.swift */,
-				F295F610204B1B720021CE53 /* ReactiveStocksError.swift */,
 				F2586A0E204B67E20093FD55 /* ServiceProvider.swift */,
 				F2360AB8204107160035F7C7 /* Assets.xcassets */,
 			);
@@ -260,7 +267,9 @@
 		F2360AD520410A6D0035F7C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F26641572054FE8D00E56EF4 /* Errors */,
 				F2360AD620410A910035F7C7 /* Stock.swift */,
+				F26641552054F56100E56EF4 /* DailyTimeSeries.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				F2360B49204370490035F7C7 /* API.swift */,
-				F2360B3120410D850035F7C7 /* StockQuoteService.swift */,
+				F2360B3120410D850035F7C7 /* StockDataService.swift */,
 				F2360B472043693A0035F7C7 /* Secrets.swift */,
 			);
 			path = Networking;
@@ -288,10 +297,11 @@
 		F2360B1E20410CB50035F7C7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F280AC57205612F700A472A2 /* Consumable.swift */,
 				F2360B2120410CE10035F7C7 /* Displayable.swift */,
 				F2360B1F20410CE10035F7C7 /* EnumCollection.swift */,
-				F2360B2020410CE10035F7C7 /* Then.swift */,
 				F2F04329204AF1F400644F31 /* Identifiable.swift */,
+				F2360B2020410CE10035F7C7 /* Then.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -352,6 +362,16 @@
 				F2586A04204B5D3E0093FD55 /* Store */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F26641572054FE8D00E56EF4 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				F266415A205517AB00E56EF4 /* ApiError.swift */,
+				F26641582054FF2600E56EF4 /* NetworkingError.swift */,
+				F295F610204B1B720021CE53 /* ParsingError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		F2C6ED652043885A00C10A51 /* Extensions */ = {
@@ -517,10 +537,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F295F611204B1B720021CE53 /* ReactiveStocksError.swift in Sources */,
+				F295F611204B1B720021CE53 /* ParsingError.swift in Sources */,
 				F2360B1020410C6D0035F7C7 /* NSObject+Extensions.swift in Sources */,
 				F2360B1720410C6D0035F7C7 /* URL+Extensions.swift in Sources */,
 				F2586A03204B5BC30093FD55 /* AppState.swift in Sources */,
+				F280AC58205612F700A472A2 /* Consumable.swift in Sources */,
 				F2360B1420410C6D0035F7C7 /* Array+Extensions.swift in Sources */,
 				F2360B1820410C6D0035F7C7 /* UILabel+Extensions.swift in Sources */,
 				F2586A0F204B67E20093FD55 /* ServiceProvider.swift in Sources */,
@@ -539,8 +560,9 @@
 				F2360B2F20410D5D0035F7C7 /* UIControl+Closures.swift in Sources */,
 				F2360B462041126A0035F7C7 /* Attributed.swift in Sources */,
 				F2360ADE20410BCA0035F7C7 /* Colors.swift in Sources */,
+				F26641562054F56100E56EF4 /* DailyTimeSeries.swift in Sources */,
 				F2360B1D20410C6D0035F7C7 /* SignalObserver+Extensions.swift in Sources */,
-				F2360B3220410D850035F7C7 /* StockQuoteService.swift in Sources */,
+				F2360B3220410D850035F7C7 /* StockDataService.swift in Sources */,
 				F2586A08204B5E560093FD55 /* AppAction.swift in Sources */,
 				F2C915A2204D5DC300637486 /* DetailViewController.swift in Sources */,
 				F2360B2220410CE10035F7C7 /* EnumCollection.swift in Sources */,
@@ -550,8 +572,10 @@
 				F2F0432A204AF1F400644F31 /* Identifiable.swift in Sources */,
 				F2360B1920410C6D0035F7C7 /* SignalProducer+Extensions.swift in Sources */,
 				F2F04328204AF0C500644F31 /* UICollectionView+Extensions.swift in Sources */,
+				F26641592054FF2600E56EF4 /* NetworkingError.swift in Sources */,
 				F2F0432C204B0D4600644F31 /* DHURLSessionMock.swift in Sources */,
 				F2360AB2204107160035F7C7 /* AppDelegate.swift in Sources */,
+				F266415B205517AB00E56EF4 /* ApiError.swift in Sources */,
 				F2360B1120410C6D0035F7C7 /* UIViewController+Extensions.swift in Sources */,
 				F2360B2D20410D5D0035F7C7 /* ClosureHandler.swift in Sources */,
 				F2360B482043693A0035F7C7 /* Secrets.swift in Sources */,

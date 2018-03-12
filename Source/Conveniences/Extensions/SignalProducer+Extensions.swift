@@ -6,6 +6,12 @@ import ReactiveSwift
 import Result
 
 extension SignalProducer {
+    static func error(_ error: Error) -> SignalProducer<Value, AnyError> {
+        return SignalProducer<Value, AnyError> { (observer, disposable) in
+            observer.send(error: AnyError(error))
+        }
+    }
+
     func ignoreErrors(replacementValue: Value? = nil, andDo block: ((Error) -> ())? = nil) -> SignalProducer<Value, NoError> {
         return flatMapError { error in
             print("Ignoring error: \(error)")

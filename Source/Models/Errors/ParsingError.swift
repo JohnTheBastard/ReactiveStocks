@@ -3,6 +3,7 @@
 
 import Foundation
 
-enum ReactiveStocksError: Error {
-    case dataTask
+enum ParsingError: Error {
+    case failedCast(String)
+    case unrecognizedTimeZone(String)
 }
