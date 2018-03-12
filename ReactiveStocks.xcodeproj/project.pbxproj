@@ -112,7 +112,6 @@
 		F2360AC8204107170035F7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2360AD620410A910035F7C7 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		F2360AD820410AEA0035F7C7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2360ADA20410AF70035F7C7 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cartfile; path = ../SliderPuzzle/Puzzle/Cartfile; sourceTree = "<group>"; };
 		F2360ADD20410BCA0035F7C7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F2360B0220410C6C0035F7C7 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSObject+Extensions.swift"; path = "Source/Conveniences/Extensions/NSObject+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		F2360B0320410C6C0035F7C7 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Source/Conveniences/Extensions/UIViewController+Extensions.swift"; sourceTree = SOURCE_ROOT; };
@@ -157,6 +156,7 @@
 		F26641582054FF2600E56EF4 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		F266415A205517AB00E56EF4 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		F280AC57205612F700A472A2 /* Consumable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumable.swift; sourceTree = "<group>"; };
+		F280AC6D2056671000A472A2 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		F295F610204B1B720021CE53 /* ParsingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingError.swift; sourceTree = "<group>"; };
 		F2C9158F204D53F700637486 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F2C91590204D53F700637486 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 				F2360AAF204107160035F7C7 /* Products */,
 				F2360B33204110F10035F7C7 /* Frameworks */,
 				F2360AD820410AEA0035F7C7 /* Info.plist */,
-				F2360ADA20410AF70035F7C7 /* Cartfile */,
+				F280AC6D2056671000A472A2 /* Cartfile */,
 			);
 			sourceTree = "<group>";
 		};
