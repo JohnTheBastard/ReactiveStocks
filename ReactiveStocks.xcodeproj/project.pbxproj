@@ -47,7 +47,6 @@
 		F2360B41204110F20035F7C7 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2360B39204110F20035F7C7 /* SwiftyUserDefaults.framework */; };
 		F2360B42204110F20035F7C7 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2360B3A204110F20035F7C7 /* ReactiveSwift.framework */; };
 		F2360B462041126A0035F7C7 /* Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360B452041126A0035F7C7 /* Attributed.swift */; };
-		F2360B482043693A0035F7C7 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360B472043693A0035F7C7 /* Secrets.swift */; };
 		F2360B4A204370490035F7C7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360B49204370490035F7C7 /* API.swift */; };
 		F2586A03204B5BC30093FD55 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2586A02204B5BC30093FD55 /* AppState.swift */; };
 		F2586A06204B5D5C0093FD55 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2586A05204B5D5C0093FD55 /* AppReducer.swift */; };
@@ -60,6 +59,7 @@
 		F26641592054FF2600E56EF4 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26641582054FF2600E56EF4 /* NetworkingError.swift */; };
 		F266415B205517AB00E56EF4 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F266415A205517AB00E56EF4 /* ApiError.swift */; };
 		F280AC58205612F700A472A2 /* Consumable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280AC57205612F700A472A2 /* Consumable.swift */; };
+		F280AC6F205668B100A472A2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280AC6E205668B100A472A2 /* Secrets.swift */; };
 		F295F611204B1B720021CE53 /* ParsingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295F610204B1B720021CE53 /* ParsingError.swift */; };
 		F2C91591204D53F700637486 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C9158F204D53F700637486 /* Nimble.framework */; };
 		F2C91592204D53F700637486 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C91590204D53F700637486 /* Quick.framework */; };
@@ -108,7 +108,7 @@
 		F2360AB1204107160035F7C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2360AB3204107160035F7C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F2360AB8204107160035F7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F2360AC2204107160035F7C7 /* ReactiveStocksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveStocksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2360AC2204107160035F7C7 /* ReactiveStocksSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveStocksSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2360AC8204107170035F7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2360AD620410A910035F7C7 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		F2360AD820410AEA0035F7C7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,7 +143,6 @@
 		F2360B39204110F20035F7C7 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		F2360B3A204110F20035F7C7 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		F2360B452041126A0035F7C7 /* Attributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributed.swift; sourceTree = "<group>"; };
-		F2360B472043693A0035F7C7 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		F2360B49204370490035F7C7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F2586A02204B5BC30093FD55 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		F2586A05204B5D5C0093FD55 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
@@ -157,6 +156,7 @@
 		F266415A205517AB00E56EF4 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		F280AC57205612F700A472A2 /* Consumable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumable.swift; sourceTree = "<group>"; };
 		F280AC6D2056671000A472A2 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		F280AC6E205668B100A472A2 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		F295F610204B1B720021CE53 /* ParsingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingError.swift; sourceTree = "<group>"; };
 		F2C9158F204D53F700637486 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		F2C91590204D53F700637486 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				F2360AB0204107160035F7C7 /* Source */,
-				F2360AC5204107170035F7C7 /* ReactiveStocksTests */,
+				F2360AC5204107170035F7C7 /* ReactiveStocksSpecs */,
 				F2360AAF204107160035F7C7 /* Products */,
 				F2360B33204110F10035F7C7 /* Frameworks */,
 				F2360AD820410AEA0035F7C7 /* Info.plist */,
@@ -214,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				F2360AAE204107160035F7C7 /* ReactiveStocks.app */,
-				F2360AC2204107160035F7C7 /* ReactiveStocksTests.xctest */,
+				F2360AC2204107160035F7C7 /* ReactiveStocksSpecs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,13 +233,13 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		F2360AC5204107170035F7C7 /* ReactiveStocksTests */ = {
+		F2360AC5204107170035F7C7 /* ReactiveStocksSpecs */ = {
 			isa = PBXGroup;
 			children = (
 				F2128EED204D71F3008462DC /* StockQuoteServiceSpec.swift */,
 				F2360AC8204107170035F7C7 /* Info.plist */,
 			);
-			path = ReactiveStocksTests;
+			path = ReactiveStocksSpecs;
 			sourceTree = "<group>";
 		};
 		F2360AD32041098B0035F7C7 /* App */ = {
@@ -289,7 +289,7 @@
 			children = (
 				F2360B49204370490035F7C7 /* API.swift */,
 				F2360B3120410D850035F7C7 /* StockDataService.swift */,
-				F2360B472043693A0035F7C7 /* Secrets.swift */,
+				F280AC6E205668B100A472A2 /* Secrets.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -426,9 +426,9 @@
 			productReference = F2360AAE204107160035F7C7 /* ReactiveStocks.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F2360AC1204107160035F7C7 /* ReactiveStocksTests */ = {
+		F2360AC1204107160035F7C7 /* ReactiveStocksSpecs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F2360ACE204107170035F7C7 /* Build configuration list for PBXNativeTarget "ReactiveStocksTests" */;
+			buildConfigurationList = F2360ACE204107170035F7C7 /* Build configuration list for PBXNativeTarget "ReactiveStocksSpecs" */;
 			buildPhases = (
 				F2360ABE204107160035F7C7 /* Sources */,
 				F2360ABF204107160035F7C7 /* Frameworks */,
@@ -440,9 +440,9 @@
 			dependencies = (
 				F2360AC4204107160035F7C7 /* PBXTargetDependency */,
 			);
-			name = ReactiveStocksTests;
+			name = ReactiveStocksSpecs;
 			productName = ReactiveStocksTests;
-			productReference = F2360AC2204107160035F7C7 /* ReactiveStocksTests.xctest */;
+			productReference = F2360AC2204107160035F7C7 /* ReactiveStocksSpecs.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -480,7 +480,7 @@
 			projectRoot = "";
 			targets = (
 				F2360AAD204107160035F7C7 /* ReactiveStocks */,
-				F2360AC1204107160035F7C7 /* ReactiveStocksTests */,
+				F2360AC1204107160035F7C7 /* ReactiveStocksSpecs */,
 			);
 		};
 /* End PBXProject section */
@@ -578,7 +578,7 @@
 				F266415B205517AB00E56EF4 /* ApiError.swift in Sources */,
 				F2360B1120410C6D0035F7C7 /* UIViewController+Extensions.swift in Sources */,
 				F2360B2D20410D5D0035F7C7 /* ClosureHandler.swift in Sources */,
-				F2360B482043693A0035F7C7 /* Secrets.swift in Sources */,
+				F280AC6F205668B100A472A2 /* Secrets.swift in Sources */,
 				F2360B2420410CE10035F7C7 /* Displayable.swift in Sources */,
 				F2C9159C204D553500637486 /* BaseNavigationController.swift in Sources */,
 				F2360B1A20410C6D0035F7C7 /* UIStackView+Extensions.swift in Sources */,
@@ -765,9 +765,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ReactiveStocksTests/Info.plist;
+				INFOPLIST_FILE = ReactiveStocksSpecs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.BastardizedProductions.ReactiveStocksTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BastardizedProductions.ReactiveStocksSpecs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -786,9 +786,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ReactiveStocksTests/Info.plist;
+				INFOPLIST_FILE = ReactiveStocksSpecs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.BastardizedProductions.ReactiveStocksTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BastardizedProductions.ReactiveStocksSpecs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -817,7 +817,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2360ACE204107170035F7C7 /* Build configuration list for PBXNativeTarget "ReactiveStocksTests" */ = {
+		F2360ACE204107170035F7C7 /* Build configuration list for PBXNativeTarget "ReactiveStocksSpecs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2360ACF204107170035F7C7 /* Debug */,
