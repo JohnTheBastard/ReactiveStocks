@@ -20,14 +20,14 @@ class StockDataServiceSpec: QuickSpec {
         describe("StockDataService") {
             context("Retrieve Stocks") {
                 self.stockDataServiceUnderTest = StockDataService_Testable()
-                self.stocks = []
-
-                it("should have a quote service") {
-                    expect(self.stockDataServiceUnderTest).toNot(beNil())
-                }
+                //self.stocks = []
 
                 it("should start with no stocks") {
                     expect(self.stocks.count).to(equal(0))
+                }
+
+                it("should have a quote service") {
+                    expect(self.stockDataServiceUnderTest).toNot(beNil())
                 }
 
                 let promise = expectation(description: "Status code: 200")
@@ -45,4 +45,6 @@ class StockDataServiceSpec: QuickSpec {
             }
         }
     }
+
+    public func testFake() {} //Fixes some problems with Quick/Nimble in Xcode 9
 }
