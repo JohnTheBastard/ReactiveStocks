@@ -50,3 +50,5 @@ Then cut and paste you the key you generated in Step 1 into the string literal f
 Build the app!
 
 >  Unfortunately, the free API we're using for real-time stock data can be unreliable at certain times of the day and requests will occasionally time-out. If you do not see any stock prices when the app loads, wait a few moments, as a new request is made every 60 seconds. (Requests are logged to the console, so you should be able to see whether a request succeeds.)
+
+To run tests, please first select the `ReactiveStocksSpecs` schema.

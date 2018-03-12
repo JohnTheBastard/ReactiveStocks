@@ -28,15 +28,36 @@ import ReactiveSwift
 import ReactiveCocoa
 import struct Result.AnyError
 
-protocol DHURLSession {
+protocol DHURLSessionProtocol {
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
     func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
 }
 
-extension URLSession: DHURLSession { }
+class DHURLSession: DHURLSessionProtocol {
+    private let urlSession: URLSession
 
-final class URLSessionMock : DHURLSession {
+    var reactive: Reactive<URLSession> {
+        return self.urlSession.reactive
+    }
 
+    init(urlSession: URLSession) {
+        self.urlSession = urlSession
+    }
+
+    func dataTask(with url: URL,
+                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+        return self.urlSession.dataTask(with: url, completionHandler: completionHandler)
+
+    }
+    func dataTask(with request: URLRequest,
+                  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+        return self.urlSession.dataTask(with: request, completionHandler: completionHandler)
+    }
+}
+
+
+final class URLSessionMock : DHURLSessionProtocol {
+    typealias Session = URLSessionMock
     var url: URL?
     var request: URLRequest?
     private let dataTaskMock: URLSessionDataTaskMock

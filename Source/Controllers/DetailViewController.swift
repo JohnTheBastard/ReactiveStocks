@@ -5,6 +5,8 @@ import UIKit
 import ReactiveSwift
 import ReactiveCocoa
 
+//TODO: Put StackView in a ScrollView, add a network activity spinner. 
+
 class DetailViewController: BaseViewController {
     typealias Provider = AppStateProvider & QueryServiceProvider
     private var provider: Provider

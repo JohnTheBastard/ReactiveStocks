@@ -77,7 +77,7 @@ struct TimeSeries: Decodable {
     static let dateFormatter: DateFormatter = {
         var _dateFormatter = DateFormatter()
         _dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        _dateFormatter.dateFormat = "yyyy-MM-dd"
+        _dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //"yyyy-MM-dd"
         _dateFormatter.timeZone = TimeZone(identifier: "America/New_York")!
 
         return _dateFormatter
@@ -122,35 +122,45 @@ struct TimeSeries: Decodable {
         }
 
         init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: TimeSeries.MetaData.CodingKeys.self)
-            let info      = try container.decode(String.self, forKey: .info)
-            let symbol    = try container.decode(String.self, forKey: .symbol)
-            let refresh   = try container.decode(String.self, forKey: .refresh)
-            let output    = try container.decode(String.self, forKey: .output)
-            let tzString  = try container.decode(String.self, forKey: .timeZone)
+            do {
+                let container = try decoder.container(keyedBy: TimeSeries.MetaData.CodingKeys.self)
+                let info      = try container.decode(String.self, forKey: .info)
+                let symbol    = try container.decode(String.self, forKey: .symbol)
+                let refresh   = try container.decode(String.self, forKey: .refresh)
+                let output    = try container.decode(String.self, forKey: .output)
+                let tzString  = try container.decode(String.self, forKey: .timeZone)
 
-            self.info        = info
-            self.symbol      = symbol
+                self.info        = info
+                self.symbol      = symbol
 
-            if tzString == "US/Eastern" {
-                //TODO: We only care about New York for now, but it would be
-                //      cleaner to have an enum for US time zones.
+                if tzString == "US/Eastern" {
+                    //TODO: We only care about New York for now, but it would be
+                    //      cleaner to have an enum for US time zones.
+                    self.timeZone = TimeZone(identifier: "America/New_York")!
+                } else {
+                    throw ParsingError.unrecognizedTimeZone(tzString)
+                }
+
+
+                if let lastRefresh = TimeSeries.dateFormatter.date(from: refresh) {
+                    self.lastRefresh = lastRefresh
+                } else {
+                    throw ParsingError.failedCast("Unable to cast a Date from String: \(refresh)")
+                }
+
+                if let outputSize = OutputSize(rawValue: output) {
+                    self.outputSize = outputSize
+                } else {
+                    throw ParsingError.failedCast("Unknown case for TimeSeries.MetaData.OutputSize: \(output)")
+                }
+
+            } catch let error as DecodingError {
+                print(error)
+                self.info = ""
+                self.symbol = ""
+                self.lastRefresh = Date()
+                self.outputSize = .compact
                 self.timeZone = TimeZone(identifier: "America/New_York")!
-            } else {
-                throw ParsingError.unrecognizedTimeZone(tzString)
-            }
-
-
-            if let lastRefresh = TimeSeries.dateFormatter.date(from: refresh) {
-                self.lastRefresh = lastRefresh
-            } else {
-                throw ParsingError.failedCast("Unable to cast a Date from String: \(refresh)")
-            }
-
-            if let outputSize = OutputSize(rawValue: output) {
-                self.outputSize = outputSize
-            } else {
-                throw ParsingError.failedCast("Unknown case for TimeSeries.MetaData.OutputSize: \(output)")
             }
         }
     }

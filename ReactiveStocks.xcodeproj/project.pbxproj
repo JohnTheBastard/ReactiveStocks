@@ -12,6 +12,7 @@
 		F2128EF1204D7D45008462DC /* ReactiveSwift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F2360B3A204110F20035F7C7 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2128EF2204D8009008462DC /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2360B36204110F20035F7C7 /* Result.framework */; };
 		F2128EF3204D800D008462DC /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F2360B36204110F20035F7C7 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F21749202056C3E200D4E20F /* batch.json in Resources */ = {isa = PBXBuildFile; fileRef = F217491F2056C3E200D4E20F /* batch.json */; };
 		F2360AB2204107160035F7C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360AB1204107160035F7C7 /* AppDelegate.swift */; };
 		F2360AB4204107160035F7C7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2360AB3204107160035F7C7 /* MainViewController.swift */; };
 		F2360AB9204107160035F7C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2360AB8204107160035F7C7 /* Assets.xcassets */; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		F2128EED204D71F3008462DC /* StockQuoteServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuoteServiceSpec.swift; sourceTree = "<group>"; };
+		F217491F2056C3E200D4E20F /* batch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = batch.json; sourceTree = "<group>"; };
 		F2360AAE204107160035F7C7 /* ReactiveStocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveStocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2360AB1204107160035F7C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2360AB3204107160035F7C7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				F2128EED204D71F3008462DC /* StockQuoteServiceSpec.swift */,
 				F2360AC8204107170035F7C7 /* Info.plist */,
+				F217491F2056C3E200D4E20F /* batch.json */,
 			);
 			path = ReactiveStocksSpecs;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21749202056C3E200D4E20F /* batch.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

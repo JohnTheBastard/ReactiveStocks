@@ -13,7 +13,7 @@ class StockDataService {
 
     private let decoder = JSONDecoder()
 
-    private(set) lazy var session: URLSession = {
+    private(set) lazy var session: DHURLSession = {
         let config = URLSessionConfiguration.ephemeral.then {
             $0.httpMaximumConnectionsPerHost = 8
             $0.allowsCellularAccess = true
@@ -24,7 +24,8 @@ class StockDataService {
             $0.httpShouldUsePipelining = true
         }
 
-        return URLSession(configuration: config)
+        let session = URLSession(configuration: config)
+        return DHURLSession(urlSession: session)
     }()
 
     private(set) lazy var scheduledStockQuotes: SignalProducer<[Stock], AnyError> = {
@@ -90,6 +91,7 @@ class StockDataService {
     fileprivate func decodeResponse<T: Consumable>(_ type: T.Type, from data: Data) -> SignalProducer<[T.Item], AnyError> {
         return SignalProducer<[T.Item], AnyError> { [unowned self] (observer, disposable) in
             do {
+                print(data)
                 let t = try self.decoder.decode(type, from: data)
                 observer.send(value: t.consumables)
             } catch let decodeError as NSError {
@@ -108,7 +110,10 @@ extension StockDataService: QueryServiceProvider {
 //MARK: Testable subclass
 #if DEBUG //A wrapper class to expose [file]private methods for unit testing.
 class StockDataService_Testable: StockDataService {
+    public var mockSession: DHURLSessionProtocol?
+
     public override init() { super.init() }
+
     public override func getDetails(for stock: Stock) -> SignalProducer<[DailySummary], AnyError> {
         return super.getDetails(for: stock)
     }
@@ -116,8 +121,28 @@ class StockDataService_Testable: StockDataService {
         return super.request(api: api, interval: seconds)
     }
     public override func requestData(_ request: URLRequest) -> SignalProducer<(Data, URLResponse), AnyError> {
-        return super.requestData(request)
+        guard let mockSession = self.mockSession else { return super.requestData(request) }
+
+        let producer = SignalProducer<(Data, URLResponse), AnyError> { (observer, disposable) in
+            let task = mockSession.dataTask(with: request) { (data, response, error) in
+                if let data = data, let response = response {
+                    observer.send(value: (data, response))
+                } else if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+                    observer.send(error: AnyError(NetworkingError(response: response)))
+                } else if let error = error {
+                    observer.send(error: AnyError(error))
+                }
+            }
+
+            task.resume()
+        }
+
+        return producer.retry(upTo: 2)
+                       .on(failed: { (error: AnyError) in
+                           print("Network error occurred: \(error as Error)")
+                        })
     }
+
     public override func consumeJSON<T: Consumable>(_ type: T.Type, from data: Data,
                                                     and response: URLResponse) -> SignalProducer<[T.Item], AnyError> {
         return super.consumeJSON(type, from: data, and: response)

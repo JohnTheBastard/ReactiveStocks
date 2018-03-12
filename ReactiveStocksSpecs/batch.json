@@ -1,0 +1,87 @@
+{
+    "Meta Data": {
+        "1. Information": "Batch Stock Market Quotes",
+        "2. Notes": "IEX Real-Time Price provided for free by IEX (https://iextrading.com/developer/).",
+        "3. Time Zone": "US/Eastern"
+    },
+    "Stock Quotes": [
+                     {
+                     "1. symbol": "ADBE",
+                     "2. price": "222.5500",
+                     "3. volume": "655207",
+                     "4. timestamp": "2018-03-12 10:16:53"
+                     },
+                     {
+                     "1. symbol": "AAPL",
+                     "2. price": "181.9250",
+                     "3. volume": "7419233",
+                     "4. timestamp": "2018-03-12 10:16:55"
+                     },
+                     {
+                     "1. symbol": "FB",
+                     "2. price": "185.2600",
+                     "3. volume": "3830525",
+                     "4. timestamp": "2018-03-12 10:16:55"
+                     },
+                     {
+                     "1. symbol": "GOOG",
+                     "2. price": "1171.8100",
+                     "3. volume": "468045",
+                     "4. timestamp": "2018-03-12 10:16:51"
+                     },
+                     {
+                     "1. symbol": "IBM",
+                     "2. price": "160.3200",
+                     "3. volume": "1138125",
+                     "4. timestamp": "2018-03-12 10:16:54"
+                     },
+                     {
+                     "1. symbol": "INTC",
+                     "2. price": "51.1450",
+                     "3. volume": "8833390",
+                     "4. timestamp": "2018-03-12 10:16:55"
+                     },
+                     {
+                     "1. symbol": "MSFT",
+                     "2. price": "96.6400",
+                     "3. volume": "4366073",
+                     "4. timestamp": "2018-03-12 10:16:53"
+                     },
+                     {
+                     "1. symbol": "NKE",
+                     "2. price": "66.8850",
+                     "3. volume": "967651",
+                     "4. timestamp": "2018-03-12 10:16:53"
+                     },
+                     {
+                     "1. symbol": "NVDA",
+                     "2. price": "252.1750",
+                     "3. volume": "4931652",
+                     "4. timestamp": "2018-03-12 10:16:55"
+                     },
+                     {
+                     "1. symbol": "ORCL",
+                     "2. price": "53.2400",
+                     "3. volume": "2553137",
+                     "4. timestamp": "2018-03-12 10:16:47"
+                     },
+                     {
+                     "1. symbol": "SNAP",
+                     "2. price": "18.0000",
+                     "3. volume": "3549075",
+                     "4. timestamp": "2018-03-12 10:16:55"
+                     },
+                     {
+                     "1. symbol": "TWTR",
+                     "2. price": "35.2150",
+                     "3. volume": "6465207",
+                     "4. timestamp": "2018-03-12 10:16:54"
+                     },
+                     {
+                     "1. symbol": "VMW",
+                     "2. price": "125.4800",
+                     "3. volume": "505266",
+                     "4. timestamp": "2018-03-12 10:16:51"
+                     }
+                     ]
+}
