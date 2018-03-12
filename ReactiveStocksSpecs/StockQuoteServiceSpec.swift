@@ -12,6 +12,9 @@ class StockDataServiceSpec: QuickSpec {
     var stocks: [Stock]!
 
     override func spec() {
+        beforeSuite {
+            self.stocks = []
+        }
         afterSuite {
             self.stockDataServiceUnderTest = nil
             self.stocks = nil
@@ -20,7 +23,6 @@ class StockDataServiceSpec: QuickSpec {
         describe("StockDataService") {
             context("Retrieve Stocks") {
                 self.stockDataServiceUnderTest = StockDataService_Testable()
-                //self.stocks = []
 
                 it("should start with no stocks") {
                     expect(self.stocks.count).to(equal(0))
@@ -37,7 +39,7 @@ class StockDataServiceSpec: QuickSpec {
                     promise.fulfill()
                 }.start()
 
-                wait(for: [promise], timeout: 3)
+                //wait(for: [promise], timeout: 1)
 
                 it("should eventually return 13 stocks") {
                     expect(self.stocks.count).toEventually(equal(13))

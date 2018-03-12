@@ -105,8 +105,29 @@ extension StockDataService: QueryServiceProvider {
     }
 }
 
+//MARK: Testable subclass
+#if DEBUG //A wrapper class to expose [file]private methods for unit testing.
 class StockDataService_Testable: StockDataService {
-    public override init() {
-        super.init()
+    public override init() { super.init() }
+    public override func getDetails(for stock: Stock) -> SignalProducer<[DailySummary], AnyError> {
+        return super.getDetails(for: stock)
+    }
+    public override func request(api: API, interval seconds: Double) -> SignalProducer<URLRequest, AnyError> {
+        return super.request(api: api, interval: seconds)
+    }
+    public override func requestData(_ request: URLRequest) -> SignalProducer<(Data, URLResponse), AnyError> {
+        return super.requestData(request)
+    }
+    public override func consumeJSON<T: Consumable>(_ type: T.Type, from data: Data,
+                                                    and response: URLResponse) -> SignalProducer<[T.Item], AnyError> {
+        return super.consumeJSON(type, from: data, and: response)
+    }
+    public override func scheduler<T: Consumable>(type: T.Type, api: API,
+                                                  interval seconds: Double) -> SignalProducer<[T.Item], AnyError> {
+        return super.scheduler(type: type, api: api, interval: seconds)
+    }
+    public override func decodeResponse<T: Consumable>(_ type: T.Type, from data: Data) -> SignalProducer<[T.Item], AnyError> {
+        return super.decodeResponse(type, from: data)
     }
 }
+#endif

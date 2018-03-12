@@ -13,6 +13,12 @@ struct DailySummary {
     var volume: Int
     var dividend: Float
     var splitCoefficient: Float
+
+    static var zero: DailySummary {
+        return DailySummary(date: Date(), open: 0.0, high: 0.0, low: 0.0,
+                            close: 0.0,  adjustedClose: 0.0, volume: 0,
+                            dividend: 0.0, splitCoefficient: 1.0)
+    }
 }
 
 extension DailySummary: Decodable {
