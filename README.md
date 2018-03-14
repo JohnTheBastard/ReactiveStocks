@@ -2,7 +2,7 @@
 
 A simple stocks app. ReactiveSwift is used to update stock quotes every minute.
 
-TODO: Implement stock detail view and test suite.
+TODO: more comprehensive test suite
 
 ## Getting Started
 
